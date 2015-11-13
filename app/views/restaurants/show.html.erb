@@ -1,0 +1,19 @@
+<h1>Restaurant Listing</h1>
+	
+<table id = "r-table">
+	<th>Name</th>
+	<th>Phone</th>
+	<th>Description</th>
+	<tr>
+    <p>
+	    <td><%= @restaurant.name %></td>
+	    <td><%= @restaurant.phone %></td>
+	    <td><%= @restaurant.description %></td>
+	</p>
+  </tr>
+</table>
+<br>
+<br>
+<%= link_to "All Restaurants", restaurants_path %>
+
+​
