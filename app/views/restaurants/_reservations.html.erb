@@ -1,0 +1,14 @@
+<table id = "re-table">
+  <th>Reservations Time</th>
+  <th>Reservation Name</th>
+  <th>Comments</th>
+  <% @reservation.each do |re| %>
+    <tr>
+      <p>
+        <td><%= re.reservation_time %></td>
+        <td><%= re.reservation_name %></td>
+        <td><%= re.reservation_comments %></td>
+    </p>
+    </tr>
+  <% end %>
+</table>

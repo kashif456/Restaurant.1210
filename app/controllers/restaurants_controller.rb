@@ -1,6 +1,12 @@
 class RestaurantsController < ApplicationController
   #validates :name,  presence: true
-  
+  #before_action :authenticate_user!
+  #before_action :authenticate_user!, only: :new
+  #before_action :authenticate_user!, except: [:new, :show]
+
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+
+
   def index
     @restaurant = Restaurant.all
   end
@@ -11,6 +17,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @reservation = @restaurant.reservation.all
   end
 
   
